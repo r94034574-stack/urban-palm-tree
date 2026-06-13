@@ -1,25 +1,144 @@
+local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+function wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
+
+data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) if (x == '=') then return '' end local r,f='',(b:find(x)-1) for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end return r; end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x) if (#x ~= 8) then return '' end local c=0 for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end return string.char(c) end)) end
+
+
+ 
+
+
+-- ==================== CONFIGURAÇÃO DA UI CUSTOMIZADA ====================
 IS_CUSTOM_UI_MODE = true
 CUSTOM_UI_MODE_DATA = {
-    Name = "cap cut Hub",
-    Theme = "Orange",
-    Logo = "rbxassetid://14640964801",
-    Background = "rbxassetid://14640964801",
-    YouTube = "rafaelk6n",
-    Discord = "tts9PrnRks",
-    WelcomeMessage = {
-        "cap",
-        "rafael"
-    },
-    TrailIcon = "😜",
-    ToggleIcon = "rbxassetid://14640964801",
-    CommunityIcon = "rbxassetid://14640964801",
-    Contributers = {
-        "cap cut"
-    },
-    IntroText = "Preparing your HUB for an amazing experience.",
-    GetKeyLink = "https://hehehub-acsu123.pythonanywhere.com/api/getkeyv4?hwid=BG7w89RuTxxtugtJH04EijntTZ2m72Sf-datThgStep1",
-    TutorialLink = "https://bom.so/XtoI3F",
+    Name = wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('TSsxrXyWqRnNPSnOyTFmNNBkryVxJajJzSOGBKamUxMmCESTVTQjcYNY2FwIGN1dCBIdWI='),
+    Theme = wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('mNlRERpJRBPsKlJxVQEzewJJmaUHxZlziiBxXzcanmhIkOapbfOaFMFT3Jhbmdl'),
+    Logo = wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('hywvVDOpBCyzriuXUvXhEiroODrCxZhAjVWemZEUmeUHvliZqlSmJalcmJ4YXNzZXRpZDovLzE0NjQwOTY0ODAx'),
+    Background = wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('AluhSPEmCgAVzbyyrHNNtgiHUyBwgDpfmplDtPatlmqCTpzUDJodvJqcmJ4YXNzZXRpZDovLzE0NjQwOTY0ODAx'),
+    YouTube = wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('crCZWXCwfWaIWcxWzAWfZdTOsumtFqgDtYPuVJZEdsrFFkdrTzXSPdfcmFmYWVsazZu'),
+    Discord = wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('zDXKXzvIWsInWILpuPVpRbpCeeNZoZhoBPJOWlDZIhYBuRPIomwhLjZdHRzOVByblJrcw=='),
+    WelcomeMessage = {wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('UTZyzwBMgFlwOHJmiSFISdJrNFpYBkioUWCsESlkncmGlNFssMOIscEY2Fw'), wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('zNWDFAUkXcTsbaOelVRYSZkpmgGUGtfmPeMgxJDjKMbYLrgluJTgnNGcmFmYWVs')},
+    TrailIcon = wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('CPlhmQJajMgadjtTBKpEvcutWHwFJlqtBAdfCQGKRVItkyTkojyWEDE8J+YnA=='),
+    ToggleIcon = wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('CbRSWfviQIuJoQpYeeDZizMYWvIJxZYRPpYECFWwttxJHpkZHjkxzkOcmJ4YXNzZXRpZDovLzE0NjQwOTY0ODAx'),
+    CommunityIcon = wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('mbUixwsJHsECjAyyLAPFjgJyDijkahVntEmyCIdpedBWZlqhpNFFcplcmJ4YXNzZXRpZDovLzE0NjQwOTY0ODAx'),
+    Contributers = {wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('yYSQudOmkuBQyJHEiDEhFklbpURoXkyYbgfyoicpjuhVoonzoswghKoY2FwIGN1dA==')},
+    IntroText = wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('zgkCgMhbvmZWsanixjwDXwZBYJDcLlPksiUbJQpejrEXYqzlLKtSZUIUHJlcGFyaW5nIHlvdXIgSFVCIGZvciBhbiBhbWF6aW5nIGV4cGVyaWVuY2Uu'),
+    -- Remove o link antigo (não será usado)
+    GetKeyLink = wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('ACSJJiTrIBqqbCiGBFOxPBpzBTBfPoOgpmXDgknQcnQgdNzUJIjlQjf'),
+    TutorialLink = wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('qTggejAOjVWRrryMoxparNXgPOTfKrqoaBDuGYfnnaoAiZlxUqvWvdyaHR0cHM6Ly9ib20uc28vWHRvSTNG'),
 }
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI"))()
+-- ==================== SOBRESCREVE O SISTEMA DE KEY DO HOHO_H ====================
+-- O HOHO_H espera que exista uma função getgenv().GetKey ou algo similar.
+-- Vamos forçar a chave válida diretamente.
 
+getgenv().Key = wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('eJDbKeBZsdUJHkIWgOlAMzyLcvidkPejIAHfOHTCIwYJovoJiwmXCqVcGFzdGVmeTEwMQ==')   -- Chave que o HOHO_H vai ler
+getgenv().GetKey = function()
+    return wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('LLmqbLUpldbkLZgQLGHsLJZIWKwTlYhUMWIQkjHjhhxEPILIxeiIrjwcGFzdGVmeTEwMQ==')        -- Retorna a chave diretamente, sem servidor
+end
+
+-- Opcional: desabilita a requisição ao servidor original
+getgenv().CheckKey = function()
+    return true                -- Sempre válido
+end
+
+-- ==================== SISTEMA DE VERIFICAÇÃO PERSONALIZADA (COM PASTEBIN) ====================
+local pastebinRawUrl = wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('XuBbUzBDZksYnpiDegyrGwLVfRXBnFMUdkytHHpNhYjUYtldmIikMwiaHR0cHM6Ly9wYXN0ZWJpbi5jb20vcmF3LzYzelZBNjh3')
+local expectedKey = wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('rBzMQYYTcTFgxOOYjALiLBKzVEOtpmhEWfEZCcVtMRUxqJRvRpXkCwjcGFzdGVmeTEwMQ==')
+
+local function notify(title, text, duration)
+    pcall(function()
+        game:GetService(wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('AzOgGeBpgsTXdQbzNPIsgilvGUWHWZZqhLnCJTcxDWkMRibMuVoUHGoU3RhcnRlckd1aQ==')):SetCore(wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('CjpqTqcSllrkKQmgntOMeloeGfJTmSxjuueXMtKNCbZsdvTzMmRjSXRU2VuZE5vdGlmaWNhdGlvbg=='), {
+            Title = title,
+            Text = text,
+            Duration = duration or 3
+        })
+    end)
+end
+
+-- Interface simples para o usuário digitar a chave (opcional, se quiser que eles digitem)
+local function createKeyPrompt()
+    local gui = Instance.new(wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('HnkQDRLoGFjWstvbgVwmaEJAvejxftNSFERCOdzRQhJgwAKOGfFQsgZU2NyZWVuR3Vp'))
+    gui.Name = wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('apXQxtTPnsLhHeyfGEVyogPyGMMugiTqSGpcKyoQWdlVIdZGrXLxknvS2V5UHJvbXB0')
+    gui.Parent = game:GetService(wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('KnAxGyOqDvrNXdVGlCJkRLMfnQWbJrmwVNfsInkWobEoAWiSJlSvrgYQ29yZUd1aQ=='))
+    
+    local frame = Instance.new(wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('zxLPhoOQIRhlurBvwwIRxsPttPuhTwvvfWGXBJHvmNVhIOyfCETAJfCRnJhbWU='))
+    frame.Size = UDim2.new(0, 300, 0, 150)
+    frame.Position = UDim2.new(0.5, -150, 0.5, -75)
+    frame.BackgroundColor3 = Color3.fromRGB(30, 30, 40)
+    frame.Parent = gui
+    
+    local corner = Instance.new(wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('fFTgPzkkCOLoEKoXoonawQOOxddeBvptQcDIlMIVStHNtYihRXbJFmVVUlDb3JuZXI='))
+    corner.CornerRadius = UDim.new(0, 10)
+    corner.Parent = frame
+    
+    local title = Instance.new(wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('SAWYXsGBMnhXTVYPaNGKVfjJjJzjrBKVaJaIoLifThdGoruTpgOlWEuVGV4dExhYmVs'))
+    title.Size = UDim2.new(1, 0, 0, 30)
+    title.BackgroundTransparency = 1
+    title.Text = wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('WSqIdwoHuEPMvzGQBCAzubJTVwSDKZJXAMnVRilUbIavDuhMPyTUmUK8J+UkSBWZXJpZmljYcOnw6NvIGRlIENoYXZl')
+    title.TextColor3 = Color3.fromRGB(255, 200, 0)
+    title.Font = Enum.Font.GothamBold
+    title.TextSize = 18
+    title.Parent = frame
+    
+    local info = Instance.new(wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('UrNCgYfcbUuybUfGMnIShQyKKIVwdmqLCXudBGrdQplWTJQBdoqCkOsVGV4dExhYmVs'))
+    info.Size = UDim2.new(1, -20, 0, 40)
+    info.Position = UDim2.new(0, 10, 0, 35)
+    info.BackgroundTransparency = 1
+    info.Text = wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('VSiSLkrfHJcmouXjgtQQSqRwgpsPaqnBjyQSHjeFPmoyYfHVWEKNvTbRGlnaXRlIGEgY2hhdmUgb2J0aWRhIG5vIFBhc3RlYmluOg==')
+    info.TextColor3 = Color3.fromRGB(200, 200, 200)
+    info.TextSize = 12
+    info.TextWrapped = true
+    info.Parent = frame
+    
+    local inputBox = Instance.new(wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('cWWUeOWpLCmGFADpfWUYrvtkoERiwZotwraokeDxDvofsoOpiqCfzRcVGV4dEJveA=='))
+    inputBox.Size = UDim2.new(0.8, 0, 0, 35)
+    inputBox.Position = UDim2.new(0.1, 0, 0, 80)
+    inputBox.BackgroundColor3 = Color3.fromRGB(50, 50, 60)
+    inputBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+    inputBox.PlaceholderText = wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('FTwyOlCrnSYBoPGsZgcUbMLOXmVPIMpXYjsRQBWNctkxLsHIcOrRYDuQ29sZSBhIGNoYXZlIGFxdWkuLi4=')
+    inputBox.Font = Enum.Font.Gotham
+    inputBox.TextSize = 14
+    inputBox.Parent = frame
+    
+    local submit = Instance.new(wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('ATxllBTwJwhpaaBURMxKaevWyqBrirdAVGTWbnRtqPHuxxBGnZmsCFOVGV4dEJ1dHRvbg=='))
+    submit.Size = UDim2.new(0.4, 0, 0, 35)
+    submit.Position = UDim2.new(0.3, 0, 0, 125)
+    submit.BackgroundColor3 = Color3.fromRGB(0, 150, 0)
+    submit.Text = wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('DSrbmJewQHfLAaSyEYIQceheCoyIrtEQQFcRUzGlBMirOhwQqpvMOyAVmVyaWZpY2Fy')
+    submit.TextColor3 = Color3.fromRGB(255, 255, 255)
+    submit.Font = Enum.Font.GothamBold
+    submit.TextSize = 14
+    submit.Parent = frame
+    local btnCorner = Instance.new(wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('IKEiOcTslLAplcXAVqFNnuZfTWYrasjpFDFYgHDnFxgKNrLDdenzKqlVUlDb3JuZXI='))
+    btnCorner.CornerRadius = UDim.new(0, 5)
+    btnCorner.Parent = submit
+    
+    local resultMsg = Instance.new(wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('kDNzGfqzoxWsJHCbDYAaithMeuBRsJsWLdTXYyThrygdmBOVroTJcrYVGV4dExhYmVs'))
+    resultMsg.Size = UDim2.new(1, -20, 0, 30)
+    resultMsg.Position = UDim2.new(0, 10, 0, 170)
+    resultMsg.BackgroundTransparency = 1
+    resultMsg.Text = wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('NikUmTsfYIVndqCjVJWwVDNSQQIHrMICxeemXvnhqPjDJWRczwsUUgO')
+    resultMsg.TextColor3 = Color3.fromRGB(255, 100, 100)
+    resultMsg.TextSize = 12
+    resultMsg.Font = Enum.Font.Gotham
+    resultMsg.Parent = frame
+    
+    submit.MouseButton1Click:Connect(function()
+        local userKey = inputBox.Text:gsub(wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('AhpUKzsJWokDSFrYvxpudFQqtqkZTcXyDxBkfjrLRfTaYdMoIZHxCqYJXMr'), wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('gUPMXTytzEoShdOpHnenYJYaWOgBvLwZXVKiWoBSrqwlqWZibcpWLnv'))
+        if userKey == expectedKey then
+            resultMsg.Text = wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('CbcwMfdKsBzxMQgBGYNyTIFpPZWxVxQHbRUrAjysnIZJUrTVxPpjRvy4pyFIENoYXZlIHbDoWxpZGEhIENhcnJlZ2FuZG8gaHViLi4u')
+            resultMsg.TextColor3 = Color3.fromRGB(0, 255, 0)
+            task.wait(1)
+            gui:Destroy()
+            -- Agora carrega o HOHO_H (já com a key burlada)
+            loadstring(game:HttpGet(wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('EpNLAMhCdAyvhRJuEQnjMIXNPDFiyZbJsouFSYzWBzyYyDXHiROuhgOaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2Fjc3UxMjMvSE9IT19IL21haW4vTG9hZGluZ19VSQ==')))()
+        else
+            resultMsg.Text = wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('WCYzWXRBmvGTtUKOEGRsbjgurtmipWWwkbEiQvvvESAXSsQCTfvfdJR4p2MIENoYXZlIGludsOhbGlkYSEgVGVudGUgbm92YW1lbnRlLg==')
+            resultMsg.TextColor3 = Color3.fromRGB(255, 100, 100)
+            inputBox.Text = wgTmaKzhrAiMXKflQXQFnkFseKuoQSEYsIntwHsWjnzpAGSqWxczswiYDKHUbCXqJW('TnFzPqqxkpIiNlwVMlbBOuqamtIjzmEWBVxPfpPzYfvnnToDzvcRLOa')
+        end
+    end)
+end
+
+-- Inicia o prompt
+createKeyPrompt()      
